@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>防災トレーニング</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>防災トレーニング</h1>
+
+<div id="menu" class="screen active">
+<button onclick="next('s119')">🚒119通報</button>
+<button onclick="next('s110')">🚓110通報</button>
+<button onclick="next('quiz')">🔥防災クイズ</button>
+</div>
+
+<div id="s119" class="screen">
+<h2>119通報</h2>
+<p>「火事」か「救急」と話してください</p>
+<button onclick="startVoice()">🎤話す</button>
+<p id="voice"></p>
+<button onclick="next('menu')">戻る</button>
+</div>
+
+<div id="s110" class="screen">
+<h2>110通報</h2>
+<button onclick="alert('場所を教えてください')">事件</button>
+<button onclick="alert('けが人はいますか？')">事故</button>
+<button onclick="next('menu')">戻る</button>
+</div>
+
+<div id="quiz" class="screen">
+<h2>防災クイズ</h2>
+<p>火事の時エレベーターは？</p>
+<button onclick="alert('正解！')">使わない</button>
+<button onclick="alert('危険です')">使う</button>
+<button onclick="next('menu')">戻る</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
